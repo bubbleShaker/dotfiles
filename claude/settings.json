@@ -1,0 +1,10 @@
+{
+  "theme": "dark-ansi",
+  "model": "opus",
+  "statusLine": {
+    "type": "command",
+    "command": "~/.claude/statusline.py",
+    "padding": 0,
+    "refreshInterval": 60
+  }
+}

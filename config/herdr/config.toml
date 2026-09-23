@@ -1,0 +1,17 @@
+onboarding = false
+
+[ui.toast]
+delivery = "herdr"
+
+[theme]
+name = "dracula"
+auto_switch = false
+
+[ui.sound]
+enabled = true
+
+[ui]
+status_indicators = "dots"
+
+[terminal]
+default_shell = "/usr/bin/zsh"

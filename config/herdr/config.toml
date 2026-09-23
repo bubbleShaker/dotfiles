@@ -12,6 +12,7 @@ enabled = true
 
 [ui]
 status_indicators = "dots"
+copy_on_select = false
 
 [terminal]
 default_shell = "/usr/bin/zsh"

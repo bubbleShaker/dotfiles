@@ -21,6 +21,7 @@ git clone https://github.com/bubbleShaker/dotfiles ~/ghq/github.com/bubbleShaker
 | `home/.gitconfig` | `~/.gitconfig` | gh 認証、ghq の root、コミット用の名前とメール |
 | `config/herdr/config.toml` | `~/.config/herdr/config.toml` | herdr (テーマ dracula、既定シェル zsh) |
 | `config/gtk-4.0/gtk.css` | `~/.config/gtk-4.0/gtk.css` | ターミナルの余白 35px (WSL では使わない) |
+| `config/Code/User/settings.json` | `~/.config/Code/User/settings.json` | VS Code (フォント Ubuntu Mono) (WSL では使わない) |
 | `dconf/ptyxis.ini` | dconf `/org/gnome/Ptyxis/` | Ptyxis の不透明度 0.9 など (WSL では使わない) |
 | `claude/statusline.py` | `~/.claude/statusline.py` | Claude Code のステータスライン |
 | `claude/settings.json` | `~/.claude/settings.json` | Claude Code の設定 (無いときだけコピー) |

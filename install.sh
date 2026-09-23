@@ -96,6 +96,7 @@ apply_configs() {
   link claude/statusline.py     "$HOME/.claude/statusline.py"
   if ! is_wsl; then
     link config/gtk-4.0/gtk.css "$HOME/.config/gtk-4.0/gtk.css"
+    link config/Code/User/settings.json "$HOME/.config/Code/User/settings.json"
   fi
 
   # Claude Code は settings.json を自分で書き換えるので、リンクではなく初回のみコピー

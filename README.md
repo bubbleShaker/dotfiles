@@ -23,6 +23,8 @@ git clone https://github.com/bubbleShaker/dotfiles ~/ghq/github.com/bubbleShaker
 | `config/gtk-4.0/gtk.css` | `~/.config/gtk-4.0/gtk.css` | ターミナルの余白 35px (WSL では使わない) |
 | `config/Code/User/settings.json` | `~/.config/Code/User/settings.json` | VS Code (フォント Ubuntu Mono) (WSL では使わない) |
 | `dconf/ptyxis.ini` | dconf `/org/gnome/Ptyxis/` | Ptyxis の不透明度 0.9 など (WSL では使わない) |
+| `dconf/media-keys.ini` | dconf `/org/gnome/settings-daemon/plugins/media-keys/` | Ctrl+Alt+V で CopyQ を開く (WSL では使わない) |
+| `install.sh` 内 | `copyq config` | CopyQ: 項目を選んでもウィンドウを閉じない (WSL では使わない) |
 | `claude/statusline.py` | `~/.claude/statusline.py` | Claude Code のステータスライン |
 | `claude/settings.json` | `~/.claude/settings.json` | Claude Code の設定 (無いときだけコピー) |
 
@@ -32,6 +34,7 @@ git clone https://github.com/bubbleShaker/dotfiles ~/ghq/github.com/bubbleShaker
 
 - 普通のファイル: リンクなのでそのまま `git commit` するだけ
 - Ptyxis: `dconf dump /org/gnome/Ptyxis/ | grep -v '^window-size=' > dconf/ptyxis.ini`
+- ショートカット: `dconf dump /org/gnome/settings-daemon/plugins/media-keys/ > dconf/media-keys.ini`
 - Claude Code: `~/.claude/settings.json` の変更を `claude/settings.json` に手で反映 (`hooks` は herdr が生成するので含めない)
 
 ## 別途必要なこと

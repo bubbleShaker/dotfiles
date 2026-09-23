@@ -26,7 +26,7 @@ latest_tag() {
 install_packages() {
   log "apt パッケージ"
   local pkgs=(zsh git gh curl unzip python3 pulseaudio-utils)
-  is_wsl || pkgs+=(ibus-mozc)
+  is_wsl || pkgs+=(ibus-mozc copyq)
   sudo apt update
   sudo apt install -y "${pkgs[@]}"
 }
@@ -111,6 +111,16 @@ apply_configs() {
   if ! is_wsl && has dconf; then
     log "Ptyxis の設定 (dconf)"
     dconf load /org/gnome/Ptyxis/ < "$DOTFILES/dconf/ptyxis.ini"
+    log "ショートカットの設定 (dconf)"
+    dconf load /org/gnome/settings-daemon/plugins/media-keys/ < "$DOTFILES/dconf/media-keys.ini"
+  fi
+
+  # CopyQ は copyq.conf を自分で書き換えるので、リンクではなく値だけ設定
+  if ! is_wsl && has copyq; then
+    log "CopyQ の設定"
+    copyq --start-server config activate_closes false >/dev/null &&
+      copyq config close_on_unfocus false >/dev/null ||
+      echo "  CopyQ に接続できませんでした (デスクトップ上で再実行してください)"
   fi
 }
 
